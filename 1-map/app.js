@@ -24,7 +24,7 @@ const people = [
   },
 ];
 
-// Quokka.js -Extension Ctrl+K Q to start Quokka on a file
+// Quokka.js -Extension Ctrl + K + Q to start Quokka on a file
 
 // returns a new array
 // does not change the size of orignal array (unlike filter)
@@ -35,6 +35,7 @@ const people = [
 
 //   return person.age * 2;
 // });
+
 // console.log(ages);
 
 // one liner
@@ -59,7 +60,7 @@ console.log(newPeople);
 // Wrap your Data in react or html
 
 // 1liner
-const names_1 = people.map((person)=> `<h2>${person.name}</h2>`)
+const names_1 = people.map((person) => `<h2>${person.name}</h2>`)
 
 
 // const names = people.map((person)=>{
