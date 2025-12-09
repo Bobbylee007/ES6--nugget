@@ -24,14 +24,14 @@ const cart = [
   },
 ];
 
-let {totalItems, cartTotal} = cart.reduce(
+let { totalItems, cartTotal } = cart.reduce(
   (total, cartItem) => {
     // console.log(cartItem)
     const { amount, price } = cartItem;
     //count items
     total.totalItems += amount;
     // count sum
-    total.cartTotal = amount * price
+    total.cartTotal = amount * price;
     return total;
   },
   {
@@ -40,9 +40,29 @@ let {totalItems, cartTotal} = cart.reduce(
   }
 );
 
-cartTotal = parseFloat(cartTotal.toFixed(2))
+cartTotal = parseFloat(cartTotal.toFixed(2));
 // console.log(total); for reference - it been distructure from reducer functon itself
-console.log(totalItems, cartTotal)
+console.log(totalItems, cartTotal);
 // github repos Example
 
 const url = "https://api.github.com/users/john-smilga/repos?per_page=100";
+// const url = 'https://github.com/Bobbylee007/node-fundt-tut-john-smilga/blob/main/03-task-manage'
+
+const fetchRepos = async () => {
+  const response = await fetch(url);
+  const data = await response.json()
+
+ const newData = data.reduce((total, repo)=>{
+  const {language} = repo
+
+  if(total[language]){
+    total[language] = total[language] + 1
+  }else{
+    total[language] = 1
+  }
+  return total
+ }, {})
+ console.log(newData)
+}
+
+fetchRepos()
