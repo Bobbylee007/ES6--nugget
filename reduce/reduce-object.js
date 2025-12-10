@@ -50,19 +50,27 @@ const url = "https://api.github.com/users/john-smilga/repos?per_page=100";
 
 const fetchRepos = async () => {
   const response = await fetch(url);
-  const data = await response.json()
+  const data = await response.json();
 
- const newData = data.reduce((total, repo)=>{
-  const {language} = repo
+  const newData = data.reduce((total, repo) => {
+    const { language } = repo;
 
-  if(total[language]){
-    total[language] = total[language] + 1
-  }else{
-    total[language] = 1
-  }
-  return total
- }, {})
- console.log(newData)
-}
+    // if(total[language]){
+    //   total[language] = total[language] + 1
+    // }else{
+    //   total[language] = 1
+    // }
 
-fetchRepos()
+    if (language) {
+      total[language] = total[language] + 1 || 1;
+    }
+    return total;
+
+
+  }, {});
+
+  
+  console.log(newData);
+};
+
+fetchRepos();
