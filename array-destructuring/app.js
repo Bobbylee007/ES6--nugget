@@ -12,5 +12,16 @@ console.log(fruit1, fruit2, fruit3);
 // destucturing
 
 const [enemy, , bob, , kelly, susan] = friends;
-
+  
 console.log(enemy, bob, kelly, susan);
+
+let first = "bob";
+let second = "john";
+
+// let temp = second;
+// second = first
+// first = temp
+
+[second,first] = [first, second]
+
+console.log(first, second);
