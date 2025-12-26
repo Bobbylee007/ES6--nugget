@@ -1,4 +1,4 @@
-// Filter - returns a new array, can manipulate the size 0f new array (unlike map), returns based on condition
+// Filter - returns a new array, can manipulate the size of new array (unlike map), returns based on condition
 // Find - return single instance, returns first match, if no match -  undefind
 
 const people = [
@@ -34,13 +34,12 @@ const developer = people.filter((person) => person.position === "developer");
 console.log(developer);
 
 // no match
-const seniorDev = people.filter((item) => item.postion === "senior dev");
+const seniorDev = people.filter((item) => item.position === "senior dev");
 console.log(seniorDev);
 
-// ======================================================================/
+// ====================================================================================/
 
 // find
-
 const peter = people.find((person) => person.name === "peter");
 console.log(peter);
 
@@ -51,14 +50,13 @@ console.log(fruit);
 const oldPerson = people.find((person) => person.age > 35);
 console.log(oldPerson);
 
-// ===============================================================================/
+// ====================================================================================/
 
 // multiple matches - first match
-
 const randomPerson = people.find((person) => person.age < 35);
 console.log(randomPerson);
-
 // NB - it fine to use find() when u have unique values Eg Api(_id)
+
 
 // difference btw filter & find
 

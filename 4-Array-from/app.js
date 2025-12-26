@@ -17,6 +17,8 @@ const text = document.querySelectorAll(".text");
 const newText = Array.from(text).find((item) => item.textContent === "Person");
 // console.log(newText);
 
+
+
 // General setting For pagination
 const items = Array.from({ length: 120 }, (_, index) => {
   return index;
@@ -32,3 +34,4 @@ const newItems = Array.from({ length: pages }, (_, index) => {
 });
 
 console.log(newItems);
+ 

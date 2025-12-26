@@ -16,14 +16,18 @@ const items = {
 console.log(items["featured-items"]);
 console.log(person["name"]);
 
+
 // setting up Keys dynamically using square bracket notation
 
 let appState = "loading";
 appState = "error";
+
 const keyName = "computer";
+
 const app = {
   [appState]: true,
 };
+
 app[keyName] = "apple";
 console.log(app);
 

@@ -68,4 +68,4 @@ const names_1 = people.map((person) => `<h2>${person.name}</h2>`)
 // })
 
 const result = document.querySelector('.result');
-result.innerHTML = names_1.join(' ');
+result.innerHTML = names_1.join('');
