@@ -7,7 +7,7 @@ const people = [
   },
   {
     name: "peter",
-    location: { street: "123 Pine street", },
+    location: { street: "123 Pine street" }
   },
   { name: "ssusan", location: { street: "123 Apple street", timezone: { offset: "+9:00" } } },
 ];
@@ -26,9 +26,7 @@ people.forEach((person)=>{
     console.log(person?.location?.timezone?.offset  || "hello world");
 
 
-    result.innerHTML = `<h2>Locantion and timezone ${
-      person?.location?.timezone?.offset || "hello world"
-    } </h2>`;
+    result.innerHTML = `<h2>Locantion and timezone ${person?.location?.timezone?.offset || "hello world"} </h2>`;
 })
 
 //befoer optional chaining
