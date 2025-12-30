@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        ::before,
+        ::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 24px;
+            font-family: Roboto, sans-serif;
+        }
+
+    
+
+        button{
+            padding-block: 8px;
+            padding-inline: calc(16px * 3);
+            background-color: rgb(57, 102, 228);
+            color: aliceblue;
+            font-size:18px; 
+            font-weight: 600;
+            border-style: none;
+            
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Callback Function</h1>
+    <div class="result"></div>
+    <button>click me</button>
+</body>
+<script src="app.js"></script>
+
+</html>
