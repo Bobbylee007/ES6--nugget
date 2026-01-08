@@ -16,7 +16,7 @@
 // }
 
 const users = [
-  { id: 1, name: "jhon" },
+  { id: 1, name: "john" },
   { id: 2, name: "susan" },
   { id: 3, name: "anna" },
   { id: 4, name: "bobby" },
@@ -30,10 +30,27 @@ const articles = [
 ];
 
 const getData = async () => {
-    const user = await getUser('bobby') 
-    console.log(user);
-    
-}
+      //   const user = await getUser('bobby1') 
+      //  if (user) {
+      //     const articles = await getArticles(user.id)
+      //    console.log(articles);
+      
+
+    // for error handle dont use else block; use try and catch 
+    try {
+        const user = await getUser('bobby')
+      //  if (user) {
+      //     const articles = await getArticles(user.id)
+      //   } 
+
+      const articles = await getArticles(user.id)
+      console.log(articles);   
+      }catch (error) {
+          console.log(error)
+      
+    }
+  }
+
 
 getData()
 // using .then() approach
