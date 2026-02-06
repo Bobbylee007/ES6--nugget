@@ -23,7 +23,7 @@ const products = [
 // console.log(result);
 
 
-// ============function that will get text and check if styles inclues the text==========
+// ============function that will get text and check if styles includes the text==========
 const text = 'a'
 
 const filteredProducts = products.filter((product)=> product.title.toLowerCase().includes(text))

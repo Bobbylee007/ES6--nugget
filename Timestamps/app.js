@@ -3,7 +3,7 @@
 
 console.log(new Date());
 
-// Unex Time
+// Unix Time
 // January 1, 1970
 // 1s = 1000ms
 
